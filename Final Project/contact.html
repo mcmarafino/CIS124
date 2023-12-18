@@ -1,24 +1,68 @@
 <!DOCTYPE html>
     <html lang="en">
-        <head>
-            <title>Contact</title>
-        </head>
-        <body>
+        
+        <title>Michela's Website</title>
+
+            <div class="header">
+                <link rel="stylesheet" href="style.css">
+                <h1>Michela Marafino</h1>
+                <p>Aspiring UX/UI Designer</p>
+            </div>
+
+            <div class="topnav">
+                <a href="index.html">Home</a>
+                <a href="resume.html">Resume</a>
+                <a href="projects.html">Projects</a>
+                <a class="active" href="contact.html">Contact</a>
+            </div>
+
+        
+        
             <header>
                 <h1>Contact</h1>
-                <nav>
-                    <a href="index.html">Home</a>
-                    <a href="resume.html">Resume</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
+            
             </header>
             <main>
-                
+                <form action="https://wp.zybooks.com/form-viewer.php" method="POST">
+                    
+                    <p>
+                        <label for="fname">Full Name:</label>
+                        <input type="text" id="fname" name="fname" placeholder="Full Name" minlength="1" maxlength="10" required>
+                     </p>
+                     <p>
+                        <label for="eaddress">Email Address:</label>
+                        <input type="email" id="eaddress" name="eaddress" placeholder="Email Address" required>
+                     </p>
+
+                     <p>
+                        <label for="tnumber">Telephone Number:</label>
+                        <input type="tel" id="tnumber" name="tnumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Telephone Number" required>
+                        <small>Format: 123-456-7890</small> 
+                    </p>
+
+                     <p>
+                        <label for="bday">Birthday:</label>
+                        <input type="date" id="bday" name="bday" required>
+                     </p>
+
+                     <p>
+                        <label for="comment">Comments or Questions?:</label>
+                        <textarea id="comment" name="comment" placeholder="Ask away..." rows="7" cols="40" required></textarea>
+                     </p>
+                     <label for="password">Create a password:</label>
+                     <input id="password" name="password" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.password_two.pattern = this.value;" placeholder="Password" required>
+
+                     <label for="password_two">Confirm Password:</label>
+                     <input id="password_two" name="password_two" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" placeholder="Confirm Password" required>             
+
+                     <p>
+                        <input type="submit" value="Submit">
+                     </p>
+                </form>
             </main>
+            <br>
             <footer>
                 <p>Author: Michela Marafino</p>
                 <p><a href="mailto:mcmarafino@gmail.com">mcmarafino@gmail.com</a></p>
             </footer>
-        </body>
     </html>  
